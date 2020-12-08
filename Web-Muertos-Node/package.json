@@ -1,0 +1,19 @@
+{
+  "name": "web-muertos-node",
+  "version": "1.0.0",
+  "description": "Pagina Web informativa sobre dia de muertos",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "Node.js",
+    "Express"
+  ],
+  "author": "Luis Alberto",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

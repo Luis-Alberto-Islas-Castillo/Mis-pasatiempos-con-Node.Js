@@ -1,0 +1,133 @@
+body {
+    margin: 0em;
+    font-family: 'Gotu', sans-serif;
+}
+
+h2,h3,h4,h5,h6{
+    font-family: 'Merriweather', serif;
+    color: #32027c;
+}
+
+.logo img{
+    width: 90px;
+    height: auto;  
+}
+
+.nav a{
+    color: #a81f23;
+}
+
+footer{
+    padding: 5px 0;
+    background: #1e1e1e;
+    text-align: center;
+    
+}
+
+.cover {
+    height: 400px;
+    background-image: url("../img/rsz_pieter.jpg");
+    color: #eceae7;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(4, 3, 3, 0.789);
+    background-blend-mode: darken;
+}
+
+.card {
+    border: 0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+}  
+
+.card-title {
+    min-width: 3rem;
+}
+
+.card-text{
+    min-height: 5rem;
+}
+
+.product-stripe, .slider{
+    overflow-x: scroll;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.stripe-container, .slider-container{
+    display: flex;
+}
+
+.stripe-container .card{
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.responsive-iframe{
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe iframe{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slider{
+    overflow-x: hidden;
+}
+
+.slider-container{
+    transform: translateX(0);
+    animation: slider 10s infinite;
+}
+
+.image-container{
+    width: 100%;
+    padding-top: 56.25%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.avatar{
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: #2c3e50;
+    border-radius: 1rem;
+    border-color: #2c3e50 !important;
+  }
+  .divider-custom .divider-custom-line:first-child {
+    margin-right: 1rem;
+  }
+  .divider-custom .divider-custom-line:last-child {
+    margin-left: 1rem;
+  }
+  .divider-custom .divider-custom-icon {
+    color: #2c3e50 !important;
+    font-size: 2rem;
+  }
+  .divider-custom.divider-light .divider-custom-line {
+    background-color: #fff;
+  }
+  .divider-custom.divider-light .divider-custom-icon {
+    color: #fff !important;
+  }
