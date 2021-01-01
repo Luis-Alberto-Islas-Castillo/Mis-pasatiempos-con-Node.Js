@@ -1,0 +1,45 @@
+<%- include("template/cabecera", {tituloweb: 'Pagina Agregar Casas'}) %>
+
+<section class="page-section portafolio" id="portafolio">
+    <div class="container">
+        <!-- Seccion portafolio-->
+        <h2 class="page-srction-heading text-center text-uppercase text-info mb-0">Agregar casas de Poniente</h2>
+        <!-- Iconos de decoracion-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Boton para agregar-->
+        <a class="text-white btn btn-info my-4" href="/casas/crear">Agregar</a>
+
+        <table class="table dt-responsive tablas">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Lema</th>
+                    <th scope="col">Estandarte</th>
+                    <th scope="col">Accion</th>
+                </tr>
+                <thead>
+                    <tbody>
+                        <% if (arrayCasas.length > 0) { %>
+                            <% arrayCasas.forEach(casa => { %>
+                                <tr>
+                                    <th scope="row"><%= casa.id %> </th>
+                                    <td><%= casa.nombre %> </td>
+                                    <td><%= casa.lema %> </td>
+                                    <td><%= casa.estandarte %> </td>
+                                    <td><a href="casas/<%= casa.id %>" class="btn btn-primary btn-sm">Detalles</a></td>
+                                </tr>
+                            <% }) %>
+                        <% } %> 
+                    </tbody>
+                </thead>
+            </thead>
+        </table>
+        
+</section>
+
+<%- include("template/footer") %>

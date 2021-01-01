@@ -1,0 +1,24 @@
+<%- include("template/cabecera", {tituloweb: 'Error 404' }) %>
+
+    <header class="masthead bg-info text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Imagen Principal-->
+            <img class="rounded masthead-avatar mb-5 my-4" src="/img/error-404.jpg" alt="Error 404" />
+            <!-- Titulo Principal-->
+            <h1 class="masthead-heading text-uppercase mb-0">
+                <%= titulo %>
+            </h1>
+            
+            <h4 class="text-uppercase mb-0 my-4">
+                <%= descripcion %>
+            </h4>
+            <!-- Iconos de decoracion-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </header>
+
+<%- include("template/footer") %>

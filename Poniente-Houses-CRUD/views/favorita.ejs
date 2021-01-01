@@ -1,0 +1,145 @@
+<%- include("template/cabecera", {tituloweb: 'Mi casa Fvorita' }) %>
+
+    <section class="page-section portafolio" id="portafolio">
+        <div class="container">
+            <!-- Seccion portafolio-->
+            <h2 class="page-srction-heading text-center text-uppercase text-info mb-0">Mis Casas Favoritas</h2>
+            <!-- Iconos de decoracion-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Grill items -->
+            <div class="row">
+                <!-- Primer Item -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="casa-item mx-auto" data-toggle="modal" data-target="#casaModal1">
+                        <div class="casa-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="casa-item-caption-content text-center text-white"><i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="/img/Targaryen.JPG" alt="Casa Targaryen"/>
+                    </div>
+                </div>
+
+                <!-- Segundo Item -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="casa-item mx-auto" data-toggle="modal" data-target="#casaModal2">
+                        <div class="casa-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="casa-item-caption-content text-center text-white"><i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="/img/Greyjoy.JPG" alt="Casa Greyjoy"/>
+                    </div>
+                </div>
+
+                <!-- Tercer Item -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="casa-item mx-auto" data-toggle="modal" data-target="#casaModal3">
+                        <div class="casa-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="casa-item-caption-content text-center text-white"><i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="/img/Martell.JPG" alt="Casa Martell"/>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Seccion portafolio modal -->
+    <div class="casa-modal modal fade" id="casaModal1" tabindex="-1" role="dialog" aria-labelledby="casaModal1Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portafolio-modal-title text-info text-capitalize mb-0"
+                                    id="portafolioModal1Label">Casa Targaryen</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <h4 class="mb-5">Fuego y Sangre</h4>
+                                <button class="btn btn-info" data-dismiss="modal">
+                                    <i class="fas fa-times-circle"></i>
+                                    Cerrar Ventana
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="casa-modal modal fade" id="casaModal2" tabindex="-1" role="dialog" aria-labelledby="casaModal2Labe2"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portafolio-modal-title text-info text-capitalize mb-0"
+                                    id="portafolioModal1Label">Casa Greyjoy</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <h4 class="mb-5">Nosotros no Sembramos</h4>
+                                <button class="btn btn-info" data-dismiss="modal">
+                                    <i class="fas fa-times-circle"></i>
+                                    Cerrar Ventana
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="casa-modal modal fade" id="casaModal3" tabindex="-1" role="dialog" aria-labelledby="casaModal3Labe3"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portafolio-modal-title text-info text-capitalize mb-0"
+                                    id="portafolioModal1Label">Casa Martell</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <h4 class="mb-5">Nunca Doblegado Nunca Roto</h4>
+                                <button class="btn btn-info" data-dismiss="modal">
+                                    <i class="fas fa-times-circle"></i>
+                                    Cerrar Ventana
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("template/footer") %>

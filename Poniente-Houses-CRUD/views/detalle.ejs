@@ -1,0 +1,115 @@
+<%- include("template/cabecera", {tituloweb: 'Detalle de Casa' }) %>
+
+    <section class="page-section" id="contacto">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-secondary mb-0">
+                Detalles
+            </h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <% if (error) { %>
+                <p>
+                    <%= mensaje %>
+                </p>
+                <a href="/casas" class="btn btn-dark">Volver</a>
+                <% } %>
+                    <% if (!error) { %>
+
+                        <form class="page-section" id="formularioEditar" autocomplete="off" data-id="<%= casa.id %>">
+
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <input class="form-control" id="nombreInput" type="text"
+                                        placeholder="Ingresa el Nombre" required="required" name="nombre"
+                                        value="<%= casa.nombre %>" />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <input class="form-control" id="lemaInput" type="text"
+                                        placeholder="Ingresa el Lema" required="required" name="lema"
+                                        value="<%= casa.lema %>" />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <input class="form-control" id="estandarteInput" type="text"
+                                        placeholder="Ingresa el Estandarte" required="required" name="estandarte"
+                                        value="<%= casa.estandarte %>" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg" type="submit">
+                                    Editar Datos
+                                </button>
+                            </div>
+                        </form>
+
+                        <button class="btn btn-warning btn-lg" id="btnEliminar"
+                            data-id="<%= casa.id %>">Eliminar</button>
+                        <% } %>
+        </div>
+    </section>
+
+    <%- include("template/footer") %>
+
+        <script>
+
+            /*Boton eleminar*/
+            const btnEliminar = document.querySelector('#btnEliminar')
+            btnEliminar.addEventListener('click', async () => {
+                console.log('Me diste click')
+                const id = btnEliminar.dataset.id
+                console.log('id', id)
+                try {
+                    const data = await fetch(`/casas/${id}`, {
+                        method: 'delete'
+                    })
+                    const res = await data.json()
+                    if (res.estado) {
+                        window.location.href = '/casas'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+
+            /* Boton Actualizar */
+            const formularioEditar = document.querySelector('#formularioEditar')
+
+            formularioEditar.addEventListener('submit', async (e) => {
+                e.preventDefault()
+
+                const nombre = formularioEditar.elements['nombre'].value
+                const lema = formularioEditar.elements['lema'].value
+                const estandarte = document.querySelector('#estandarteInput').value 
+                const id = formularioEditar.dataset.id
+
+                try {
+                    const data = await fetch(`/casas/${id}`, {
+                        method: 'put',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ nombre, lema, estandarte })
+                    })
+                    const res = await data.json()
+
+                    console.log(res)
+
+                    if (res.estado) {
+                        window.location.href = '/casas'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+        </script>

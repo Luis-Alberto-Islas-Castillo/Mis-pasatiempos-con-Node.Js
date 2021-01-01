@@ -1,0 +1,53 @@
+<%- include("template/cabecera", {tituloweb: 'Crear nueva Casa'}) %>
+
+<section class="page-section" id="contacto">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-secondary mb-0">Nueva Casa</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-dragon"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Formulario -->
+                <form action="/casas" method="POST" autocomplete="off">
+
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Nombre</label>
+                            <input class="form-control" id="nombre" type="text" placeholder="Ingresa el Nombre"
+                                required="required" data-validation="Porfavor Ingresa tu Nombre" name="nombre">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Lema</label>
+                            <input class="form-control" id="lema" type="text" placeholder="Ingresa el Lema"
+                                required="required" data-validation="Porfavor Ingresa el Lema" name="lema">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Estandarte</label>
+                            <input class="form-control" id="estandarte" type="text" placeholder="Ingresa el Estandarte"
+                                required="required" data-validation="Porfavor Ingresa el Lema" name="estandarte">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div id="succes"></div>
+                    <div class="form-group"><button class="btn btn-info btn-lg" id="enviarMensaje"
+                            type="submit">Insertar</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <%- include("template/footer") %>
