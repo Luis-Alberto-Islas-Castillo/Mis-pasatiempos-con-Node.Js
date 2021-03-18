@@ -1,0 +1,16 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "Trabajando con Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Luis Alberto",
+  "license": "ISC",
+  "dependencies": {
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0"
+  }
+}
